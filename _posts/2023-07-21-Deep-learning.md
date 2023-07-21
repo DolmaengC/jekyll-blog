@@ -10,7 +10,7 @@ feature_image: "https://picsum.photos/2560/600?image=733"
 image: "https://picsum.photos/2560/600?image=733"
 ---
 
-Servey about Deep learning
+Summary about Deep learning lecture
 
 _Originally from [Youtube lecture](https://www.youtube.com/playlist?list=PLAudaEp1AjCF3EPZ8ZP8R3qy0iABN8uNN)_
 
@@ -351,6 +351,93 @@ Transformer에서의 self-attention (or attention)
 
 
 
+### Transformer
+
+<img width="826" alt="스크린샷 2023-07-21 오후 5 16 41" src="https://github.com/DolmaengC/DolmaengC.github.io/assets/107832431/98440e40-cada-4244-ad09-91514a5346c1">
+
+<img width="776" alt="스크린샷 2023-07-21 오후 5 21 59" src="https://github.com/DolmaengC/DolmaengC.github.io/assets/107832431/96e15b3f-be72-42b5-9b33-7598da712a99">
+
+Masked Multi-head attention (핑크색 블럭): 인코더에서는 사용되지 않음
+
+---
+
+<img width="690" alt="스크린샷 2023-07-21 오후 5 35 08" src="https://github.com/DolmaengC/DolmaengC.github.io/assets/107832431/d3109c9d-13ee-4a3d-8bf5-3f05b550a605">
+
+- Position-wise feed-forward network
+  - 2개 이상의 fully connected layer (혹은 dense layer)로 구성
+  - Token마다 (즉, position 마다) 독립적으로 적용
+  - 첫번째 layer에 ReLU 활성화 함수 사용
+
+---
+
+
+
+<img width="789" alt="스크린샷 2023-07-21 오후 5 35 27" src="https://github.com/DolmaengC/DolmaengC.github.io/assets/107832431/c1ec143e-9207-4838-974f-491be8326eaf">
+
+---
+
+#### 위치정보 임베딩 (Positional embedding)
+
+- Transformer 모형에서는 단어들의 embedding 정보만을 사용하는 것이 아니라 (단어들이 갖는) 입력된 시퀀스 데이터 내에서의 위치 정보도 사용
+- 위치 정보를 사용하게 되면, 단어들 간의 위치를 파악함으로써 단어들 간의 상대적인 거리를 파악
+- 이를 사용하는 주된 이유는, Transformer는 RNN이나 LSTM와 같은 순환신경만 구조(단어들이 순서대로 입력)를 사용하지 않고 attention 방법을 사용하기 때문
+- 단어들이 갖는 (상대적인) 위치정보를 반영하기 위해서 위치 정보를 반영하는 벡터를 사용하는데 이를 positionla embedding 벡터
+
+
+
+#### Masked self-attention
+
+- Encoder의 self-attention과 약간 다르게 작동 -> 이해하기 위해서는 학습의 단계에서 transformer의 decoder 부분이 어떻게 작동하는지를 먼저 알아야 함
+- Teacher forcing 방법 사용
+  - decoder는 언어모형의 역할을 하지만, 학습의 단계에서는 모형이 현재 단계까지 예측한 단어들의 정보를 사용하여 다음 단어를 예측하는 것이 아니라, 정답 데이터 정보를 이용해서 각 단계의 단어들을 예측하는 것
+  - 모형이 예측한 단어들의 정보를 이용해서 다음 단어를 예측하는 경우에는 이전 단어들에 대한 예측이 잘못되었다면 그 다음 단어에 대한 예측이 제대로 될수 없기 때문
+  - 예 : '오늘은 금요일 입니다'을 'Today is Friday'로 번역하는 경우
+    - 첫 단어를 'Today'라고 예측하지 못하면, 그 다음 단어인 'is'를 제대로 예측할 수 없다
+    - 이를 위해 학습에서는 실제 정답 데이터를 사용하여 학습한다.
+    - 앞에 <SOS> 토큰을 더해서 사용 => 논문에서는 right shifted output이라고 표현
+
+
+
+#### Transformer 응용
+
+- 대표적 3가지 
+  - BERT (Bidirectional Encoder Representations from Transformers)
+    - Transformer의 encoder 부분만을 사용
+    - 주요 사용 용도
+      - 문서/ 단어 임베딩, 문서 분류, Q&A, 단어들 간의 관계 추출
+  - GPT (Generative Pre-trained Transformer)
+    - Transformer의 decoder 부분만을 사용
+    - 주요 사용 용도
+      - 텍스트 생성
+  - BART (Bidirectional and Auto-Regressive Transformers)
+    - Transformer의 encoder와 decoder 모두 사용
+    - 주요 사용 용도
+      - 텍스트 요약 등
+
+
+
+
+
+## BERT
+
+ ### BERT의 주 목적
+
+- Text 분석에서의 전이 학습 (transfer learning)
+- 학습 데이터
+  - BooksCorpus (800M words), English Wikipedia (2,500M words)
+- eㅏㄴ어와 문장의 임베딩 정보를 포함한 모형의 파라미터를 학습 -> downstream tast에 따라서 fine tuning 혹은 feature-based 방법으로 사용 가능
+
+
+
+### BERT의 구조
+
+- Transfomer의 encoder 부분만 사용
+- 2가지 형태
+  - BERTBASE (L=12, H=768, A=12, Total Parameters=110M)
+  - BERTLARGE (L=24, H=1024, A=16, Total Parameters=340M)
+  - L = encoder block의 수, H = 임베딩 벡터 또는 Hidden state 벡터의 차원의 수, A = multi-head attention에서 사용된 attentions의 수
+
+![스크린샷 2023-07-21 오후 10.06.19](/Users/choejunhyeog/Desktop/스크린샷 2023-07-21 오후 10.06.19.png)
 
 
 
@@ -360,5 +447,26 @@ Transformer에서의 self-attention (or attention)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
  

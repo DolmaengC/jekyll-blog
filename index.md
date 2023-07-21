@@ -4,8 +4,8 @@ feature_text: |
   ## DolmaengC
   HGU 19, CSEE
 feature_image: "https://picsum.photos/1300/400?image=989"
-excerpt: "안녕하세요. 저는 한동대학교 19학번 돌맹이입니다.
-전공 : AI.컴퓨터 공학"
+excerpt: "안녕하세요. 저는 한동대학교 19학번 돌맹이입니다."
+
 ---
 
 안녕하세요. 저는 한동대학교 19학번 돌맹이입니다.

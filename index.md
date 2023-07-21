@@ -11,7 +11,9 @@ excerpt: "안녕하세요. 저는 한동대학교 19학번 돌맹이입니다."
 안녕하세요. 저는 한동대학교 19학번 돌맹이입니다.
 전공 : AI.컴퓨터 공학
 
-{% include button.html text="Github" icon="github" link="https://github.com/DolmaengC" color="#0366d6" %} {% include button.html text="Buy me a coffee ☕️" link="https://www.buymeacoffee.com/choijh4161P#support" color="#f68140" %} {% include button.html text="Tweet it" icon="twitter" link="https://twitter.com/dolmaengC" color="#0d94e7" %} {% include button.html text="Install Alembic ⚗️" link="https://github.com/daviddarnes/alembic#installation" %}
+{% include button.html text="Github" icon="github" link="https://github.com/DolmaengC" color="#0366d6" %} {% include button.html text="Buy me a coffee ☕️" link="https://www.buymeacoffee.com/choijh4161P#support" color="#f68140" %} {% include button.html text="Tweet it" icon="twitter" link="https://twitter.com/dolmaengC" color="#0d94e7" %} {% include button.html text="Dolmaeng's Calendar" link="https://calendar.google.com/calendar/u/1/r" %}
+
+
 
 ## Features
 
@@ -93,3 +95,5 @@ When using Alembic as a theme means you can take advantage of the file overridin
 To add your own styles copy the [`styles.scss`](https://github.com/daviddarnes/alembic/blob/master/assets/styles.scss) into your own project with the same file path (`assets/styles.scss`). From there you can add your own styles, you can even optionally ignore the theme styles by removing the `@import "alembic";` line.
 
 If you're looking to set your own colours and fonts you can overwrite them by matching the variable names from the [`_settings.scss`](https://github.com/daviddarnes/alembic/blob/master/_sass/_settings.scss) file in your own `styles.scss`, make sure to state them before the `@import "alembic";` line so they take effect. The settings are a mixture of custom variables and settings from [Sassline](https://medium.com/@jakegiltsoff/sassline-v2-0-e424b2881e7e) - follow the link to find out how to configure the typographic settings.
+
+

@@ -3,7 +3,7 @@ title: Deep learning
 categories:
 - Deep learning
 excerpt: |
-  딥러닝에 대한 간단한 정리 자료입니다.
+  Servey about Deep learning
 feature_text: |
   ## Servey about Deep learning
 feature_image: "https://picsum.photos/2560/600?image=733"

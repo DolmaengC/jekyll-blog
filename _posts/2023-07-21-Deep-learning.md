@@ -11,7 +11,11 @@ image: "https://picsum.photos/2560/600?image=733"
 ---
 
 Servey about Deep learning
-_Originally from [Youtube lecture](https://www.youtube.com/watch?v=kyIw0nHoG9w&list=PLAudaEp1AjCF3EPZ8ZP8R3qy0iABN8uNN&index=30)_
+
+_Originally from [Youtube lecture](https://www.youtube.com/playlist?list=PLAudaEp1AjCF3EPZ8ZP8R3qy0iABN8uNN)_
+
+---
+
 #### Activation function
 
 주요 활성화 함수

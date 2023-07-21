@@ -11,7 +11,7 @@ excerpt: "안녕하세요. 저는 한동대학교 19학번 돌맹이입니다."
 안녕하세요. 저는 한동대학교 19학번 돌맹이입니다.
 전공 : AI.컴퓨터 공학
 
-{% include button.html text="Github" icon="github" link="https://github.com/DolmaengC" color="#0366d6" %} {% include button.html text="Buy me a coffee ☕️" link="https://www.buymeacoffee.com/choijh4161P#support" color="#f68140" %} {% include button.html text="Tweet it" icon="twitter" link="https://twitter.com/dolmaengC" color="#0d94e7" %} {% include button.html text="Dolmaeng's Calendar" link="https://calendar.google.com/calendar/embed?title=DolmaengC%27s%20Calendar&amp;mode=WEEK&amp;height=600&amp;wkst=1&amp;hl=en&amp;bgcolor=%23FFFFFF&amp;src=choijh4161@gmail.com&amp;color=%231B887A&amp;ctz=Asia%2FSeoul"" %}
+{% include button.html text="Github" icon="github" link="https://github.com/DolmaengC" color="#0366d6" %} {% include button.html text="Buy me a coffee ☕️" link="https://www.buymeacoffee.com/choijh4161P#support" color="#f68140" %} {% include button.html text="Tweet it" icon="twitter" link="https://twitter.com/dolmaengC" color="#0d94e7" %} {% include button.html text="Dolmaeng's Calendar" link="https://calendar.google.com/calendar/u/1/r" %}
 
 
 

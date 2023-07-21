@@ -1,3 +1,15 @@
+---
+title: Deep learning
+categories:
+- Deep learning
+excerpt: |
+  딥러닝에 대한 간단한 정리 자료입니다.
+feature_text: |
+  ## The Pot Still
+  The modern pot still is a descendant of the alembic, an earlier distillation device
+feature_image: "https://picsum.photos/2560/600?image=733"
+image: "https://picsum.photos/2560/600?image=733"
+---
 #### Activation function
 
 주요 활성화 함수

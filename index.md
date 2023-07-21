@@ -1,15 +1,17 @@
 ---
-title: Choi Junhyeok
+title: DolaengC
 feature_text: |
-  ## Choi Junhyeok
+  ## DolmaengC
   HGU 19, CSEE
 feature_image: "https://picsum.photos/1300/400?image=989"
-excerpt: "Alembic is a starting point for [Jekyll](https://jekyllrb.com/) projects. Rather than starting from scratch, this boilerplate is designed to get the ball rolling immediately. Install it, configure it, tweak it, push it."
+excerpt: "안녕하세요. 저는 한동대학교 19학번 돌맹이입니다.
+전공 : AI.컴퓨터 공학"
 ---
 
-Alembic is a starting point for [Jekyll](https://jekyllrb.com/) projects. Rather than starting from scratch, this boilerplate is designed to get rolling immediately. Install it, configure it, tweak it, push it.
+안녕하세요. 저는 한동대학교 19학번 돌맹이입니다.
+전공 : AI.컴퓨터 공학
 
-{% include button.html text="Fork it" icon="github" link="https://github.com/DolmaengC" color="#0366d6" %} {% include button.html text="Buy me a coffee ☕️" link="https://www.buymeacoffee.com/choijh4161P#support" color="#f68140" %} {% include button.html text="Tweet it" icon="twitter" link="https://twitter.com/dolmaengC" color="#0d94e7" %} {% include button.html text="Install Alembic ⚗️" link="https://github.com/daviddarnes/alembic#installation" %}
+{% include button.html text="Github" icon="github" link="https://github.com/DolmaengC" color="#0366d6" %} {% include button.html text="Buy me a coffee ☕️" link="https://www.buymeacoffee.com/choijh4161P#support" color="#f68140" %} {% include button.html text="Tweet it" icon="twitter" link="https://twitter.com/dolmaengC" color="#0d94e7" %} {% include button.html text="Install Alembic ⚗️" link="https://github.com/daviddarnes/alembic#installation" %}
 
 ## Features
 
